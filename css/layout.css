@@ -1,0 +1,79 @@
+html {
+  font-size: 16px; }
+
+body {
+  background-color: #e8edf3; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Raleway Black", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900; }
+
+p {
+  word-spacing: .4rem; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #e8edf3;
+  width: 100%; }
+  footer .social-links a {
+    color: #000;
+    line-height: 1; }
+    footer .social-links a.icomoon-spotify {
+      font-size: 1.15rem; }
+
+hr {
+  color: #8E99A6; }
+
+blockquote {
+  padding: 1em 2em 1.5rem;
+  border-radius: 3px;
+  position: relative;
+  font-style: italic; }
+  blockquote p {
+    display: inline;
+    font-weight: 600; }
+    blockquote p cite {
+      position: absolute;
+      bottom: 0;
+      right: 20%; }
+  blockquote::before, blockquote::after {
+    content: '"'; }
+
+.content {
+  padding-top: 3em; }
+
+.post {
+  padding-bottom: 100px; }
+  .post .title {
+    margin-bottom: 1.5rem; }
+  .post .cover {
+    margin-bottom: 1rem; }
+    .post .cover img {
+      width: 75%; }
+  .post .rating {
+    display: flex;
+    margin: 0 0 1rem;
+    width: 75%; }
+    .post .rating .end {
+      line-height: 1rem; }
+      .post .rating .end.no {
+        padding-right: .5em; }
+      .post .rating .end.wow {
+        padding-left: .5em; }
+    .post .rating .bar {
+      width: 100%;
+      height: 1em;
+      background-color: #8E99A6; }
+      .post .rating .bar .fill {
+        height: 100%;
+        background-color: #4a4a4a; }
+
+.greyscale {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1); }

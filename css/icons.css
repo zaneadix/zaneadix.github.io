@@ -1,0 +1,23 @@
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  background-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  line-height: 1;
+  content: ""; }
+
+.icon-letterboxd::before {
+  background-image: url("../assets/images/letterboxd-icon.svg"); }
+
+.icon-github::before {
+  background-image: url("../assets/images/github-icon.svg"); }
+
+.icon-goodreads::before {
+  background-image: url("../assets/images/goodreads-icon.svg"); }
+
+.icon-spotify::before {
+  background-image: url("../assets/images/spotify-icon.png"); }
+
+.icon-bandcamp::before {
+  background-image: url("../assets/images/bandcamp-icon.png"); }
