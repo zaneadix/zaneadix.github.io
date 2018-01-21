@@ -31,7 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Raleway Black", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: "Cutive Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -6002,11 +6002,9 @@ a.text-dark:focus, a.text-dark:hover {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
-html {
-  font-size: 16px; }
-
 body {
-  background-color: #e8edf3; }
+  background-color: #e8edf3;
+  color: #212529; }
 
 h1, .h1,
 h2, .h2,
@@ -6015,72 +6013,125 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-family: "Raleway Black", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 900; }
+  font-weight: 900;
+  text-transform: uppercase; }
 
-p {
-  word-spacing: .4rem; }
+header.navbar .navbar-brand {
+  font-family: "Raleway Black", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2rem;
+  margin-bottom: 0; }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  background-color: #e8edf3;
-  width: 100%; }
-  footer .social-links a {
+header.navbar .social-links li {
+  padding: .3rem; }
+  header.navbar .social-links li a {
     color: #000;
-    line-height: 1; }
-    footer .social-links a.icomoon-spotify {
+    line-height: 0; }
+    header.navbar .social-links li a.icomoon-spotify {
       font-size: 1.15rem; }
 
 hr {
   color: #8E99A6; }
 
-blockquote {
-  padding: 1em 2em 1.5rem;
-  border-radius: 3px;
-  position: relative;
-  font-style: italic; }
-  blockquote p {
-    display: inline;
-    font-weight: 600; }
-    blockquote p cite {
-      position: absolute;
-      bottom: 0;
-      right: 20%; }
-  blockquote::before, blockquote::after {
-    content: '"'; }
+html {
+  font-size: 16px;
+  background-color: #e8edf3; }
 
-.content {
-  padding-top: 3em; }
+img.greyscale {
+  filter: grayscale(1) contrast(120%);
+  -webkit-filter: grayscale(1) contrast(120%);
+  position: relative;
+  display: block; }
+
+p {
+  word-spacing: .4rem; }
+
+.page-content {
+  padding-top: 3rem; }
 
 .post {
-  padding-bottom: 100px; }
+  padding-bottom: 6.25rem; }
+  .post > hr {
+    margin: .5rem 0 2rem; }
   .post .title {
-    margin-bottom: 1.5rem; }
-  .post .cover {
-    margin-bottom: 1rem; }
-    .post .cover img {
-      width: 75%; }
-  .post .rating {
+    margin-bottom: 0; }
+  .post .time {
+    color: #8E99A6; }
+  .post .post-detail .cover {
+    width: 100%;
+    position: relative; }
+    .post .post-detail .cover::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 150, 255, 0.05); }
+    .post .post-detail .cover img {
+      width: 100%; }
+  .post .post-detail .rating {
     display: flex;
     margin: 0 0 1rem;
-    width: 75%; }
-    .post .rating .end {
+    width: 100%;
+    padding-bottom: 2rem;
+    font-weight: 900;
+    font-family: "Raleway Black", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-transform: uppercase;
+    font-size: .8em; }
+    .post .post-detail .rating .end {
       line-height: 1rem; }
-      .post .rating .end.no {
+      .post .post-detail .rating .end.no {
         padding-right: .5em; }
-      .post .rating .end.wow {
+      .post .post-detail .rating .end.wow {
         padding-left: .5em; }
-    .post .rating .bar {
+    .post .post-detail .rating .bar {
       width: 100%;
       height: 1em;
       background-color: #8E99A6; }
-      .post .rating .bar .fill {
+      .post .post-detail .rating .bar .fill {
         height: 100%;
-        background-color: #4a4a4a; }
-
-.greyscale {
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+        background-color: #212529;
+        position: relative; }
+        .post .post-detail .rating .bar .fill .value {
+          position: absolute;
+          display: block;
+          right: 0;
+          bottom: -2rem;
+          width: 100%;
+          text-align: center;
+          margin-right: -50%; }
+        .post .post-detail .rating .bar .fill:after {
+          content: "";
+          display: block;
+          height: 1rem;
+          width: 2px;
+          background-color: #212529;
+          position: absolute;
+          right: 0;
+          bottom: -.6rem; }
+  .post .body .post-detail .rating {
+    width: 100%; }
+  .post .body .post-detail .cover {
+    width: 40%;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    float: left; }
+  .post .body blockquote {
+    padding: 1em 2em 1.5rem;
+    border-radius: 3px;
+    position: relative;
+    font-style: italic; }
+    .post .body blockquote p {
+      display: inline;
+      font-weight: 600; }
+      .post .body blockquote p cite {
+        position: absolute;
+        bottom: 0;
+        right: 20%; }
+    .post .body blockquote::before, .post .body blockquote::after {
+      content: '"'; }
 
 [class^="icon-"]::before, [class*=" icon-"]::before {
   background-size: 1rem;
