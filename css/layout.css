@@ -2,6 +2,9 @@ body {
   background-color: #e8edf3;
   color: #212529; }
 
+html {
+  background-color: #000; }
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -12,25 +15,41 @@ h6, .h6 {
   font-weight: 900;
   text-transform: uppercase; }
 
-header.navbar .navbar-brand {
-  font-family: "Raleway Black", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 2rem;
-  margin-bottom: 0; }
-
-header.navbar .social-links li {
-  padding: .3rem; }
-  header.navbar .social-links li a {
-    color: #000;
-    line-height: 0; }
-    header.navbar .social-links li a.icomoon-spotify {
-      font-size: 1.15rem; }
+header.navbar {
+  width: 100%;
+  position: fixed;
+  background-color: #e8edf3;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0; }
+  header.navbar .navbar-brand {
+    font-family: "Raleway Black", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 2rem;
+    margin-bottom: 0; }
+  header.navbar .social-links {
+    margin-right: -1.3rem; }
+    header.navbar .social-links li {
+      padding: .5rem 1.3rem; }
+      header.navbar .social-links li a {
+        color: #000;
+        line-height: 0;
+        padding: 0; }
+        header.navbar .social-links li a.icomoon-spotify {
+          font-size: 1.15rem; }
 
 hr {
   color: #8E99A6; }
 
 html {
   font-size: 16px;
-  background-color: #e8edf3; }
+  background-color: #000; }
+  html::before {
+    content: "hey.";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 100; }
 
 img.greyscale {
   filter: grayscale(1) contrast(120%);
@@ -42,4 +61,19 @@ p {
   word-spacing: .4rem; }
 
 .page-content {
-  padding-top: 3rem; }
+  padding-top: 6rem; }
+
+.post-header {
+  position: relative;
+  background-color: #e8edf3; }
+
+.post-header.fix, .post-header.push {
+  box-sizing: border-box;
+  z-index: 90;
+  width: 100%; }
+
+.post-header.fix {
+  position: fixed; }
+
+.post-header.fix.push {
+  position: absolute; }
